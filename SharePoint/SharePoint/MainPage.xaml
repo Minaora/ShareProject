@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SharePoint"
+             BackgroundImage="bgimage.jpg"
+             x:Class="SharePoint.MainPage">
+    <AbsoluteLayout>
+        <ScrollView VerticalOptions="Fill"
+                     HorizontalOptions="FillAndExpand">
+            <StackLayout VerticalOptions="Center"
+                     HorizontalOptions="FillAndExpand"
+                     Padding="16"
+                     Orientation="Vertical">
+                <Image Source="icon.png"
+                   WidthRequest="150"
+                   HeightRequest="150"
+               HorizontalOptions="Center"/>
+                <Label Text="Welcome to Sharepoint"
+                   TextColor="White"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+                <Label Text="This app will help you to share links and content from your device to another or your friends"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center"
+                   FontSize="Small"
+                   HorizontalOptions="Center"/>
+                <StackLayout VerticalOptions="Start"
+                         HorizontalOptions="FillAndExpand"
+                         BackgroundColor="#3B5998"
+                         Padding="16"
+                         Orientation="Horizontal">
+                    <Image Source="fb.png"
+                       HeightRequest="32"/>
+                    <Label Text="Login with Facebook"
+                       TextColor="White"
+                       HorizontalOptions="FillAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Large"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="Start"
+                         HorizontalOptions="FillAndExpand"
+                         BackgroundColor="#9D0502"
+                         Padding="16"
+                         Orientation="Horizontal">
+                    <Image Source="google_plus.png"
+                       HeightRequest="32"/>
+                    <Label Text="Sign in with Google+"
+                       HorizontalOptions="FillAndExpand"
+                       HorizontalTextAlignment="Center"
+                        TextColor="White"
+                       FontSize="Large"/>
+                </StackLayout>
+                <Label Text="or"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center"
+                   FontSize="Small"/>
+                <Entry HorizontalOptions="FillAndExpand"
+                   x:Name="usernameEntry"
+                   Placeholder="Username"
+                   PlaceholderColor="#CCC"
+                   BackgroundColor="#50FFFFFF"
+                   TextColor="White"/>
+                <Entry HorizontalOptions="FillAndExpand"
+                   x:Name="passwordEntry"
+                   Placeholder="Password"
+                   BackgroundColor="#50FFFFFF"
+                   PlaceholderColor="#CCC"
+                   IsPassword="True"
+                   TextColor="White"/>
+                <Label Text="Rebember me"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center"
+                   FontSize="Small"/>
+                
+            </StackLayout>
+        </ScrollView>
+        <Grid ColumnSpacing="0"
+              HorizontalOptions="Fill"
+              VerticalOptions="FillAndExpand"
+              AbsoluteLayout.LayoutBounds=".5,1,1,.1" AbsoluteLayout.LayoutFlags="All">
+            <Button VerticalOptions="FillAndExpand"
+                    BackgroundColor="#1EB681"
+                    Grid.Column="0"
+                    ClassId="login"
+                    x:Name="loginButton"
+                    Margin="0"
+                    Text="Login"
+                    TextColor="White"
+                    Grid.Row="0"/>
+            <Button VerticalOptions="FillAndExpand"
+                    x:Name="registerButton"
+                    BackgroundColor="#444A84"
+                    Grid.Column="1"
+                    Margin="0"
+                    Grid.Row="0"
+                    TextColor="White"
+                    Text="Sign Up"/>
+        </Grid>
+    </AbsoluteLayout>
+</ContentPage>
